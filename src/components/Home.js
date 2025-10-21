@@ -3,7 +3,6 @@ import BirthdayMessage from "./BirthdayMessage";
 import mainImage from "../assets/photos/main_first.jpeg";
 import sayaaraSong from "../assets/audio/sayaara.mp3";
 
-
 const Home = ({ onPinSuccess, onViewCard }) => {
   const [pin, setPin] = useState("");
   const [error, setError] = useState("");
@@ -15,7 +14,7 @@ const Home = ({ onPinSuccess, onViewCard }) => {
 
   const pinContainerRef = useRef(null);
   const pinFormRef = useRef(null);
-   const audioRef = useRef(null);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -105,11 +104,16 @@ const Home = ({ onPinSuccess, onViewCard }) => {
 
   const revealSecret = () => {
     setShowSecret(true);
+    if (audioRef.current) {
+      audioRef.current
+        .play()
+        .catch((err) => console.log("Audio play error:", err));
+    }
   };
 
   return (
     <div className="emotional-home-container">
-       <audio ref={audioRef} src={sayaaraSong} loop />
+     <audio ref={audioRef} src={sayaaraSong} loop autoPlay />
       {/* Floating Hearts */}
       {floatingHearts.map((heart) => (
         <div
