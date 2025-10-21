@@ -82,7 +82,7 @@ const Home = ({ onPinSuccess, onViewCard }) => {
         onPinSuccess();
       }, 1500);
     } else {
-      setError("Incorrect PIN. Our love story deserves the perfect code 💔");
+      setError("Incorrect PIN.To check Hidden story enter the perfect code 💔");
       if (pinFormRef.current) {
         pinFormRef.current.classList.add("shake-animation");
         setTimeout(() => {
