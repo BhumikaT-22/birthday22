@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import BirthdayMessage from "./BirthdayMessage";
 import mainImage from "../assets/photos/main_first.jpeg";
+import sayaaraSong from "../assets/audio/sayaara.mp3";
+
 
 const Home = ({ onPinSuccess, onViewCard }) => {
   const [pin, setPin] = useState("");
@@ -13,6 +15,15 @@ const Home = ({ onPinSuccess, onViewCard }) => {
 
   const pinContainerRef = useRef(null);
   const pinFormRef = useRef(null);
+   const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) => {
+        console.log("Audio play error:", err);
+      });
+    }
+  }, []);
 
   const romanticMessages = [
     "Every heartbeat of mine whispers your name... 💓",
@@ -98,6 +109,7 @@ const Home = ({ onPinSuccess, onViewCard }) => {
 
   return (
     <div className="emotional-home-container">
+       <audio ref={audioRef} src={sayaaraSong} loop />
       {/* Floating Hearts */}
       {floatingHearts.map((heart) => (
         <div
