@@ -1,0 +1,129 @@
+.birthday-message-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.birthday-photo-container {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  position: relative;
+}
+
+.birthday-photo {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+  transition: all 0.4s ease;
+}
+
+.birthday-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.5);
+}
+
+.photo-fallback-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffb6c1, #ffd6e0);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+}
+
+/* Message Section */
+.birthday-message-card {
+  flex: 2;
+  background: linear-gradient(135deg, #ffffff, #f8faff);
+  border-radius: 18px;
+  padding: 25px 30px;
+  color: #1e293b;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease-out;
+}
+
+.birthday-message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.birthday-message-list li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.birthday-message-list strong {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.birthday-role-line {
+  margin-top: 18px;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #475569;
+  text-align: center;
+}
+
+.birthday-highlight {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e8e, #ffd6e0);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 22px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(255, 107, 107, 0.6); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .birthday-message-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .birthday-photo-container {
+    max-width: 80%;
+  }
+  .birthday-message-card {
+    text-align: center;
+  }
+}

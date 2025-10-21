@@ -1,0 +1,464 @@
+/* Emotional Home Container */
+.emotional-home-container {
+  min-height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #ff8e8e,
+    #ffafbd,
+    #ffc3a0,
+    #d4a5c0,
+    #a5d4dc,
+    #8ec5fc,
+    #6a93cb
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Hearts */
+.floating-heart {
+  position: absolute;
+  animation: floatUp linear forwards;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Emotional Content */
+.emotional-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* Her Picture Section */
+.her-picture-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.picture-frame {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-placeholder {
+  width: 300px;
+  height: 350px;
+  position: relative;
+}
+
+.photo-frame {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.photo-overlay-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.frame-decoration {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 2rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.7;
+  }
+}
+
+/* Emotional Text Section */
+.emotional-text-section {
+  text-align: center;
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heart-pulse {
+  font-size: 4rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.emotional-main-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffafbd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.emotional-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.romantic-message {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  border-left: 4px solid #ff6b6b;
+}
+
+.romantic-message p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Secret Section */
+.secret-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.reveal-secret-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+.reveal-secret-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+}
+
+/* Enhanced PIN Container */
+.pin-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pin-instruction {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.emotional-pin-input {
+  font-size: 1.4rem;
+  padding: 18px;
+  width: 220px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  margin: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.emotional-pin-input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.emotional-submit-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.emotional-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.emotional-card-btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.emotional-card-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #ffeb3b;
+  margin-top: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+/* Romantic Footer */
+.romantic-footer {
+  margin-top: 50px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.romantic-footer p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emotional-main-title {
+    font-size: 2rem;
+  }
+
+  .photo-placeholder {
+    width: 250px;
+    height: 300px;
+  }
+
+  .emotional-pin-input {
+    width: 180px;
+    font-size: 1.2rem;
+  }
+
+  .reveal-secret-btn,
+  .emotional-submit-btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+/* 🌸 Best Friend Picture Section */
+.bestfriend-picture-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.bestfriend-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.photo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.fallback-content h3 {
+  margin: 8px 0 4px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.fallback-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 240px;
+}
+
+.frame-decoration.sparkle {
+  top: -12px;
+  right: -12px;
+  font-size: 1.8rem;
+}
+
+.frame-decoration.flower {
+  bottom: -10px;
+  left: -10px;
+  font-size: 2rem;
+}
+
+.frame-decoration.heart {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+}
+
+.friendly-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical centering */
+  align-items: center; /* Horizontal centering */
+  text-align: center; /* Center text */
+  margin-top: 30px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+}
+
+.footer-hearts {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  animation: pulseHearts 2s infinite ease-in-out;
+}
+
+@keyframes pulseHearts {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.friendly-footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.bestfriend-picture-section {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 20px;    /* Space between image and content */
+}
+
+.pin-container-reveal,
+.BirthdayMessage,
+.friendly-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Center content horizontally */
+  text-align: center;     /* Center text inside */
+  margin-bottom: 30px;    /* Space between sections */
+}
+
+.friendly-footer {
+  margin-top: 40px;
+}
+
+
+
